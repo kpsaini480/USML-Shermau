@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uttam Sugar Mills Ltd. Shermau Online Data of Cane</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #ff5733; /* Change the color of the header */
+            margin-top: 0;
+            opacity: 0; /* Initially hidden */
+            animation: fadeIn 5.5s ease-in-out forwards; /* Animation */
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-decoration: underline;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .datetime {
+            color: #ff5733;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Uttam Sugar Mills Ltd. Shermau</h1>
+    <h2>Online Data of Cane</h2>
+    <p>Explore the following reports:</p>
+    <p><a href="http://45.127.197.173/FIRSTAPP/survey.aspx" target="_blank">1.Cane Survey Progress Report</a></p>
+    <p><a href="http://45.127.197.173/FIRSTAPP/surveycrpt.aspx" target="_blank">2.Supervisor Cane Survey Report</a></p>
+    <p><a href="http://45.127.197.173/FIRSTAPP/devreport1.aspx" target="_blank">3. Supervisor Planting Report</a></p>
+    <p><a href="http://45.127.197.173/FIRSTAPP/CURSHING.aspx" target="_blank">  4. Crushing Report</a></p>
+    <p><a href="http://45.127.197.173/FIRSTAPP/Cntonline.aspx" target="_blank"> 5. Center Purchase Report</a></p>
+    
+
+    <p class="datetime" id="datetime"></p>
+
+    <button class="btn" onclick="changeBackgroundColor()">Change Background Color</button>
+</div>
+
+<script>
+    function changeBackgroundColor() {
+        var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+        document.body.style.backgroundColor = randomColor;
+    }
+
+    // Function to display current date and time
+    function showDateTime() {
+        var now = new Date();
+        var dateTimeString = now.toLocaleString();
+        document.getElementById("datetime").innerHTML = "Current date and time: " + dateTimeString;
+    }
+
+    // Call the function initially and every second to update the time
+    showDateTime();
+    setInterval(showDateTime, 1000);
+</script>
+
+</body>
+</html>
